@@ -26,7 +26,7 @@ original_start = datetime.datetime.now()
 start = datetime.datetime.now()
 ```
 
-    /Users/matthew.mitchell/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+    /anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
       from ._conv import register_converters as _register_converters
     Using TensorFlow backend.
 
@@ -77,6 +77,8 @@ from keras import layers
 from keras import models
 
 model = models.Sequential()
+# start small and increase over time (layers)
+
 model.add(layers.Conv2D(32, (3, 3), activation='relu',
                         input_shape=(150, 150, 3)))
 model.add(layers.MaxPooling2D((2, 2)))
@@ -122,65 +124,65 @@ history = model.fit_generator(
 ```
 
     Epoch 1/30
-    100/100 [==============================] - 86s 855ms/step - loss: 0.4887 - acc: 0.7670 - val_loss: 0.8535 - val_acc: 0.7500
+    100/100 [==============================] - 82s 817ms/step - loss: 0.4751 - acc: 0.7793 - val_loss: 0.8668 - val_acc: 0.7500
     Epoch 2/30
-    100/100 [==============================] - 81s 814ms/step - loss: 0.2769 - acc: 0.8855 - val_loss: 0.8954 - val_acc: 0.7500
+    100/100 [==============================] - 97s 972ms/step - loss: 0.2427 - acc: 0.9039 - val_loss: 1.3650 - val_acc: 0.7500
     Epoch 3/30
-    100/100 [==============================] - 83s 828ms/step - loss: 0.1883 - acc: 0.9295 - val_loss: 0.8353 - val_acc: 0.7500
+    100/100 [==============================] - 110s 1s/step - loss: 0.1784 - acc: 0.9324 - val_loss: 1.3559 - val_acc: 0.5000
     Epoch 4/30
-    100/100 [==============================] - 82s 815ms/step - loss: 0.1391 - acc: 0.9434 - val_loss: 1.0113 - val_acc: 0.7500
+    100/100 [==============================] - 105s 1s/step - loss: 0.1301 - acc: 0.9424 - val_loss: 1.5064 - val_acc: 0.5000
     Epoch 5/30
-    100/100 [==============================] - 82s 821ms/step - loss: 0.1257 - acc: 0.9509 - val_loss: 1.0028 - val_acc: 0.7500
+    100/100 [==============================] - 106s 1s/step - loss: 0.1114 - acc: 0.9500 - val_loss: 1.9445 - val_acc: 0.5000
     Epoch 6/30
-    100/100 [==============================] - 81s 809ms/step - loss: 0.1099 - acc: 0.9525 - val_loss: 0.9202 - val_acc: 0.7500
+    100/100 [==============================] - 106s 1s/step - loss: 0.1078 - acc: 0.9590 - val_loss: 0.9459 - val_acc: 0.7500
     Epoch 7/30
-    100/100 [==============================] - 79s 786ms/step - loss: 0.0905 - acc: 0.9649 - val_loss: 1.2020 - val_acc: 0.7500
+    100/100 [==============================] - 105s 1s/step - loss: 0.0878 - acc: 0.9700 - val_loss: 0.7521 - val_acc: 0.7500
     Epoch 8/30
-    100/100 [==============================] - 78s 781ms/step - loss: 0.0873 - acc: 0.9699 - val_loss: 1.2455 - val_acc: 0.7500
+    100/100 [==============================] - 110s 1s/step - loss: 0.0760 - acc: 0.9695 - val_loss: 0.9174 - val_acc: 0.7500
     Epoch 9/30
-    100/100 [==============================] - 78s 779ms/step - loss: 0.0733 - acc: 0.9740 - val_loss: 0.8685 - val_acc: 0.7500
+    100/100 [==============================] - 81s 814ms/step - loss: 0.0741 - acc: 0.9709 - val_loss: 1.2901 - val_acc: 0.7500
     Epoch 10/30
-    100/100 [==============================] - 78s 779ms/step - loss: 0.0704 - acc: 0.9730 - val_loss: 0.5022 - val_acc: 0.7500
+    100/100 [==============================] - 72s 721ms/step - loss: 0.0594 - acc: 0.9790 - val_loss: 1.4692 - val_acc: 0.5000
     Epoch 11/30
-    100/100 [==============================] - 77s 771ms/step - loss: 0.0641 - acc: 0.9770 - val_loss: 3.1135 - val_acc: 0.5000
+    100/100 [==============================] - 75s 747ms/step - loss: 0.0586 - acc: 0.9780 - val_loss: 1.4719 - val_acc: 0.7500
     Epoch 12/30
-    100/100 [==============================] - 78s 784ms/step - loss: 0.0612 - acc: 0.9759 - val_loss: 0.8625 - val_acc: 0.7500
+    100/100 [==============================] - 87s 865ms/step - loss: 0.0470 - acc: 0.9829 - val_loss: 2.5499 - val_acc: 0.5000
     Epoch 13/30
-    100/100 [==============================] - 78s 783ms/step - loss: 0.0504 - acc: 0.9820 - val_loss: 0.5369 - val_acc: 0.7500
+    100/100 [==============================] - 89s 886ms/step - loss: 0.0452 - acc: 0.9839 - val_loss: 2.4172 - val_acc: 0.7500
     Epoch 14/30
-    100/100 [==============================] - 79s 786ms/step - loss: 0.0426 - acc: 0.9849 - val_loss: 1.5661 - val_acc: 0.7500
+    100/100 [==============================] - 90s 899ms/step - loss: 0.0327 - acc: 0.9885 - val_loss: 1.3751 - val_acc: 0.7500
     Epoch 15/30
-    100/100 [==============================] - 78s 782ms/step - loss: 0.0390 - acc: 0.9860 - val_loss: 0.8814 - val_acc: 0.7500
+    100/100 [==============================] - 82s 822ms/step - loss: 0.0416 - acc: 0.9835 - val_loss: 1.3793 - val_acc: 0.7500
     Epoch 16/30
-    100/100 [==============================] - 79s 794ms/step - loss: 0.0365 - acc: 0.9865 - val_loss: 2.3576 - val_acc: 0.7500
+    100/100 [==============================] - 83s 831ms/step - loss: 0.0262 - acc: 0.9905 - val_loss: 1.8205 - val_acc: 0.7500
     Epoch 17/30
-    100/100 [==============================] - 78s 781ms/step - loss: 0.0277 - acc: 0.9885 - val_loss: 3.1242 - val_acc: 0.5000
+    100/100 [==============================] - 77s 772ms/step - loss: 0.0296 - acc: 0.9915 - val_loss: 1.4940 - val_acc: 0.7500
     Epoch 18/30
-    100/100 [==============================] - 87s 866ms/step - loss: 0.0274 - acc: 0.9915 - val_loss: 2.1897 - val_acc: 0.7500
+    100/100 [==============================] - 82s 815ms/step - loss: 0.0199 - acc: 0.9920 - val_loss: 2.0732 - val_acc: 0.7500
     Epoch 19/30
-    100/100 [==============================] - 90s 895ms/step - loss: 0.0261 - acc: 0.9915 - val_loss: 1.5764 - val_acc: 0.7500
+    100/100 [==============================] - 83s 827ms/step - loss: 0.0163 - acc: 0.9945 - val_loss: 2.1632 - val_acc: 0.7500
     Epoch 20/30
-    100/100 [==============================] - 89s 891ms/step - loss: 0.0215 - acc: 0.9920 - val_loss: 2.8503 - val_acc: 0.5000
+    100/100 [==============================] - 78s 780ms/step - loss: 0.0177 - acc: 0.9954 - val_loss: 2.2172 - val_acc: 0.7500
     Epoch 21/30
-    100/100 [==============================] - 89s 893ms/step - loss: 0.0234 - acc: 0.9925 - val_loss: 0.5651 - val_acc: 0.7500
+    100/100 [==============================] - 80s 803ms/step - loss: 0.0124 - acc: 0.9965 - val_loss: 1.8053 - val_acc: 0.7500
     Epoch 22/30
-    100/100 [==============================] - 88s 883ms/step - loss: 0.0187 - acc: 0.9924 - val_loss: 1.5322 - val_acc: 0.7500
+    100/100 [==============================] - 88s 879ms/step - loss: 0.0113 - acc: 0.9935 - val_loss: 2.4636 - val_acc: 0.7500
     Epoch 23/30
-    100/100 [==============================] - 89s 887ms/step - loss: 0.0154 - acc: 0.9955 - val_loss: 0.8898 - val_acc: 0.7500
+    100/100 [==============================] - 83s 835ms/step - loss: 0.0114 - acc: 0.9970 - val_loss: 2.0774 - val_acc: 0.7500
     Epoch 24/30
-    100/100 [==============================] - 90s 904ms/step - loss: 0.0130 - acc: 0.9960 - val_loss: 1.2518 - val_acc: 0.7500
+    100/100 [==============================] - 84s 837ms/step - loss: 0.0079 - acc: 0.9980 - val_loss: 4.3191 - val_acc: 0.5000
     Epoch 25/30
-    100/100 [==============================] - 88s 882ms/step - loss: 0.0116 - acc: 0.9960 - val_loss: 0.3684 - val_acc: 0.7500
+    100/100 [==============================] - 86s 862ms/step - loss: 0.0093 - acc: 0.9959 - val_loss: 3.5114 - val_acc: 0.5000
     Epoch 26/30
-    100/100 [==============================] - 88s 877ms/step - loss: 0.0116 - acc: 0.9955 - val_loss: 1.5874 - val_acc: 0.7500
+    100/100 [==============================] - 87s 872ms/step - loss: 0.0066 - acc: 0.9975 - val_loss: 2.8266 - val_acc: 0.7500
     Epoch 27/30
-    100/100 [==============================] - 88s 879ms/step - loss: 0.0112 - acc: 0.9975 - val_loss: 1.5677 - val_acc: 0.7500
+    100/100 [==============================] - 98s 979ms/step - loss: 0.0069 - acc: 0.9985 - val_loss: 3.6148 - val_acc: 0.7500
     Epoch 28/30
-    100/100 [==============================] - 89s 886ms/step - loss: 0.0139 - acc: 0.9959 - val_loss: 0.7602 - val_acc: 0.7500
+    100/100 [==============================] - 93s 932ms/step - loss: 0.0042 - acc: 0.9995 - val_loss: 2.9208 - val_acc: 0.7500
     Epoch 29/30
-    100/100 [==============================] - 89s 892ms/step - loss: 0.0054 - acc: 0.9985 - val_loss: 2.1922 - val_acc: 0.7500
+    100/100 [==============================] - 91s 911ms/step - loss: 0.0062 - acc: 0.9985 - val_loss: 2.4155 - val_acc: 0.7500
     Epoch 30/30
-    100/100 [==============================] - 89s 895ms/step - loss: 0.0081 - acc: 0.9989 - val_loss: 2.8709 - val_acc: 0.5000
+    100/100 [==============================] - 115s 1s/step - loss: 0.0076 - acc: 0.9975 - val_loss: 2.7083 - val_acc: 0.7500
 
 
 
